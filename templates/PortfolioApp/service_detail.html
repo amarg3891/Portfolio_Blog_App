@@ -1,0 +1,21 @@
+{% extends "PortfolioApp/base.html" %}
+<title>{% block title %}Service Info{% endblock title %}</title>
+{% load static %}
+
+{% block page_content %}
+<h3 class="text-center mt-4" >{{ service.title }}</h1>
+<div class="row">
+    <div class="col-sm-5 mt-5">
+        <img class="mb-5 ml-5" src="{{service.images.url}}" alt="Not SHowing" width="100%">
+    </div>
+    <div class="col-sm-5 mt-5 pt-5 ml-5">
+        <h5>About the Services:</h5>
+        <p>{{ service.description }}</p>
+        <br>
+        <a href="{% url 'project_index'%}"
+                    class="btn btn-primary mt-5">
+                        Back Page
+        </a>
+    </div>
+</div>
+{% endblock %}

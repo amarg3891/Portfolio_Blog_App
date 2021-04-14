@@ -1,0 +1,33 @@
+{% extends 'PortfolioApp/base.html' %}
+<title>{% block title %}About Page {% endblock title %}</title>
+{% load static %}
+{% block page_content %}
+<div class="col-sm-8 py-3 rounded ml-5">
+    <h3>About Page</h3>
+</div>
+<div class="container mb-5">
+    <p>In General, This website is combination of two Different Projects.</p>
+    <p>Which is PortFolio and Blog where we added Authentication also.Some of the basic things you will experience
+    like CRUD operation and views. An authenticated user can Add and Edit the Blog Posts. To take look a look of CRUD you 
+    have Signup first then Login by UserName.</p>
+</div>
+<div class="card text-center">
+  <div class="card-header font-weight-bold">
+   About Site Construction
+  </div>
+  <div class="card-body">
+    <h5 class="card-title text-success">We Are Working to Serve You Best!!</h5>
+    <p class="card-text">Session Features and Some of the User Interfaces will be added like User Profile etc.</p>
+    <a href="{% url 'project_index' %}" class="btn btn-primary">Back To PortFolio</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+<div class="container mt-5">
+    <marquee behavior="" direction="">
+        <h3 class="text-warning" >This Site is Under Construction</h3>
+    </marquee>
+</div>
+
+{% endblock page_content %}

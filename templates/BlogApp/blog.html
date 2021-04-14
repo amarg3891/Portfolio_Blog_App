@@ -1,0 +1,17 @@
+{% extends 'PortfolioApp/base.html' %}
+<title>{% block title %}Blog {% endblock title %}</title>
+{% load static %}
+{% block page_content %}
+<div class="col-sm-2 py-3 rounded ml-5 mt-5 ">
+    <h3 class="font-weight-bold">Blog Page</h3>
+</div>
+{% for post in posts %}
+    <div class="jumbotron jumbotron-fluid mt-3 mr-5 ml-5 rounded">
+        <div class="container">
+            <h1 class="display-3">{{post.title}}</h1>
+            <p class="lead">{{post.desc}}</p>
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock page_content %}

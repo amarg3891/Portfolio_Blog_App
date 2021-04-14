@@ -1,0 +1,25 @@
+{% extends "PortfolioApp/base.html" %}
+<title>{% block title %}Project Info{% endblock title %}</title>
+{% load static %}
+
+{% block page_content %}
+<h3 class="text-center mt-4" >{{ project.title }}</h1>
+<hr>
+<div class="row justify-content-center">
+    <div class="col-sm-5 mt-5">
+        <img class="mb-5 ml-5" src="{{project.images.url}}" alt="Not SHowing" width="100%">
+    </div>
+    <div class="col-sm-5 mt-5 pt-5 ml-5">
+        <h5>About the project:</h5>
+        <p>{{ project.description }}</p>
+        <br>
+        <h5>Technology used:</h5>
+        <p>{{ project.technology }}</p>
+        <a href="{% url 'project_index'%}"
+                    class="btn btn-primary mt-5">
+                        Back Page
+        </a>
+    </div>
+</div>
+<hr>
+{% endblock %}
